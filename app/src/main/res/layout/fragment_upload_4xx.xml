@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".Fragment.UploadFragment">
+
+    <TextView
+        android:id="@+id/txtUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:padding="10dp"
+        android:text="Upload"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:drawableLeftCompat="@drawable/ic_round_upgrade_48" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutUploadSongs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtUpload"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutBrowseSongs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="3.3"
+            android:background="@drawable/custom_relative_layout">
+
+            <TextView
+                android:id="@+id/txtNewAlbum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingStart="15dp"
+                android:text="New Album / Song"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDescription1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNewAlbum"
+                android:layout_marginTop="15dp"
+                android:paddingStart="15dp"
+                android:text="Upload any song on cloud"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtDescription2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDescription1"
+                android:layout_marginTop="5dp"
+                android:paddingStart="15dp"
+                android:text="and share on social"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="124dp"
+                android:layout_height="146dp"
+                android:layout_alignRight="@+id/txtNewAlbum"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="21dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/upload_song_logo" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btLUploadSongs"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDescription2"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_upload_song_button"
+                android:drawableStart="@drawable/ic_outline_cloud_upload_32"
+                android:drawablePadding="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="Upload"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/addSongFragmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutUploadProgress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="6.7"
+            android:background="@drawable/custom_relative_layout_in_progress"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/txtInProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="In Progress"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:id="@+id/scrProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtInProgress"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/listProgressLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

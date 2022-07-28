@@ -1,0 +1,103 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.onlinemusicapp"
+        minSdk 26
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_16
+        targetCompatibility JavaVersion.VERSION_16
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    dataBinding {
+        enabled true
+    }
+
+    allprojects {
+        repositories {
+            maven { url "https://oss.jfrog.org/libs-snapshot" }
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'com.google.firebase:firebase-database:20.0.4'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
+    implementation 'com.firebaseui:firebase-ui-database:8.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //view pager
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //card view
+    implementation "androidx.cardview:cardview:1.0.0"
+    //recycle view
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    //ted image picker
+    implementation 'io.github.ParkSangGwon:tedimagepicker:1.2.8'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    //kenburns view
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    //smooth bottom bar
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+    //round image view
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //jc player
+    implementation 'com.github.jeancsanchez:JcPlayer:2.7.1'
+    //gif image view
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    //media
+    implementation 'androidx.media:media:1.5.0'
+    //legacy
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //spinkit
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
+    //moshi
+    implementation "com.squareup.retrofit2:converter-moshi:2.4.0"
+    //musixmatch
+    implementation 'com.sachinhandiekar:jMusixMatch:1.1.4'
+
+
+}

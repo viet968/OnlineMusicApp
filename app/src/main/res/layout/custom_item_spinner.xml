@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:id="@+id/imgAlbumLogo"
+            android:src="@drawable/lorde_melodrama"
+            android:layout_width="50dp"
+            android:scaleType="fitXY"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/txtAlbumName"
+            android:textColor="@color/black"
+            android:text="Album name"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+</LinearLayout>

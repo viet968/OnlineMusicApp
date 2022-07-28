@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    tools:context=".Fragment.MinimizePlayerFragment">
+
+    <ImageButton
+        android:id="@+id/imgBtClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:contentDescription="close"
+        android:minWidth="32dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_close_24" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgSongMinimizePlayer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@+id/imgBtClose"
+        android:src="@drawable/lorde_melodrama"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/txtSongNameMinimizePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@+id/imgSongMinimizePlayer"
+        android:text="No data!"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtSingerNameSongMinimizePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSongNameMinimizePlayer"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/imgSongMinimizePlayer"
+        android:text="No data!"
+        android:textColor="#a0a8ba"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/imgNextSongMinimizePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="next"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_round_navigate_next_32" />
+
+    <ImageButton
+        android:id="@+id/imgPlayPauseSongMinimizePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imgNextSongMinimizePlayer"
+        android:background="@null"
+        android:contentDescription="play pause"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_round_play_arrow_32" />
+
+</RelativeLayout>

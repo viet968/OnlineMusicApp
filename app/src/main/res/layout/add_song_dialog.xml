@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+   android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        >
+
+        <TextView
+            android:gravity="center"
+            android:text="Upload"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:background="#2196F3"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/dialogEdtNameSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:backgroundTint="@color/teal_200"
+            android:hint="Enter Song name"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="6dp"
+            android:textSize="20sp"
+            android:textColor="#FF8A65"
+            android:text="Singer name"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@+id/img_drop_down"
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/dialogEdtSingerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:backgroundTint="@color/teal_200"
+            android:hint="Enter Singer name"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="6dp"
+            android:textSize="20sp"
+            android:textColor="#9575CD"
+            android:text="Choose Song File"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@+id/img_drop_down"
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dialogBtChooseSongFile"
+                android:text="Choose File"
+                android:textAllCaps="false"
+                android:padding="5dp"
+                android:background="@drawable/custom_upload_song_button"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:backgroundTint="#9575CD"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/dialogTxtSongFileName"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:hint="No Such File Selected"
+                android:textColorHint="@color/black"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:background="@drawable/custom_text_view"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20sp"
+                android:textColor="#81C784"
+                android:text="Choose Album"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/img_drop_down"
+                android:background="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_weight="5.5"
+                    android:layout_width="0dp"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/dialogSpinnerAlbum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Select album"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:text="Select Album"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/dialogBtCreateNewAlbum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="4.5"
+                    android:background="@drawable/custom_upload_song_button"
+                    android:backgroundTint="#07D311"
+                    android:drawableLeft="@drawable/ic_outline_photo_album_32"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="New Album"
+                    android:textAllCaps="false"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/dialogNewAlbumLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:textSize="20sp"
+                    android:text="New Album"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/dialogBtChooseAlbumImage"
+                        android:text="Choose Image"
+                        android:textAllCaps="false"
+                        android:padding="5dp"
+                        android:background="@drawable/custom_upload_song_button"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:backgroundTint="#03A9F4"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/dialogTxtImageFileName"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:hint="No Such File Selected"
+                        android:textColorHint="@color/black"
+                        android:gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:background="@drawable/custom_text_view"
+                        android:layout_marginStart="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:weightSum="10"
+                    android:layout_marginTop="7dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/dialogEdtNewAlbumName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:background="@drawable/custom_text_view"
+                        android:gravity="center_vertical"
+                        android:hint="Enter New Album Name"
+                        android:inputType="text"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/dialogBtFinishNewAlbum"
+                        android:text="Finish"
+                        android:textAllCaps="false"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_upload_song_button"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:backgroundTint="#FFC107"
+                        android:layout_width="115dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:paddingTop="10dp"
+            android:paddingEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dialogBtCancel"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/custom_upload_song_button"
+                android:backgroundTint="#EC407A"
+                android:padding="5dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dialogBtComplete"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/custom_upload_song_button"
+                android:backgroundTint="#EA80FC"
+                android:padding="5dp"
+                android:text="Complete"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

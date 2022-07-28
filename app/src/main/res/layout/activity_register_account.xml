@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fa"
+    tools:context=".Activity.RegisterAccountActivity">
+
+    <ImageView
+        android:id="@+id/imgViewLogo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/blue_bg" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/music_login_logo" />
+
+    <ImageView
+        android:id="@+id/welcome"
+        android:layout_width="230dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="150dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/welcome" />
+
+    <EditText
+        android:id="@+id/edtRegisterUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imgViewLogo"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/corners_edittext"
+        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="10dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edtRegisterUsername"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/corners_edittext"
+        android:drawableLeft="@drawable/ic_twotone_lock_24"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtRegisterConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edtRegisterPassword"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/corners_edittext"
+        android:drawableLeft="@drawable/ic_twotone_lock_24"
+        android:drawablePadding="10dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btRegisterAccount"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtHaveAnAccount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/corners_button"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtHaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Have an account"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20sp" />
+
+</RelativeLayout>
