@@ -422,7 +422,7 @@ public class UploadSongFragment extends Fragment implements UploadSongView {
                                     uploadSongImageStorageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
                                         public void onSuccess(Uri songImageUri) {
-                                            Song uploadSong = new Song(songName, singerName,
+                                            SongDB uploadSong = new SongDB(songName, singerName,
                                                     albumName, songUri.toString(),songImageUri.toString());
                                             databaseReference.child("albums").child(albumName).child("song list").child(songName).setValue(uploadSong);
                                         }
