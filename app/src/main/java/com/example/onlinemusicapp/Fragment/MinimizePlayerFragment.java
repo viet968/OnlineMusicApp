@@ -67,8 +67,21 @@ public class MinimizePlayerFragment extends Fragment {
     }
 
     public void setMinimizeData(SongDB song){
-        txtSongNameMinimizePlayer.setText(song.getSongName());
-        txtSingerNameSongMinimizePlayer.setText(song.getSingerName());
+        String songName = song.getSongName();
+        String singerName = song.getSingerName();
+
+        if(singerName.length()>=20){
+            txtSingerNameSongMinimizePlayer.setText(singerName.substring(0,15)+"...");
+        }else{
+            txtSingerNameSongMinimizePlayer.setText(singerName);
+        }
+
+        if(songName.length() >=20){
+            txtSongNameMinimizePlayer.setText(songName.substring(0,15)+"...");
+        }else{
+            txtSongNameMinimizePlayer.setText(songName);
+        }
+
         Glide.with(context).load(song.getImageSongLink()).into(imgSongPlayingMinimize);
         startAnim(true);
         imgBtPlayPauseSongMinimizePlayer.setImageResource(R.drawable.ic_round_pause_32);
